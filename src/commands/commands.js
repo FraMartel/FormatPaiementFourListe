@@ -9,7 +9,7 @@ Office.onReady(() => {
   // If needed, Office.js is ready to be called.
 });
 
-async function highlightSelection(event) {
+async function futFormatPaFourListe(event) {
 
   // Implement your custom code here. The following code is a simple Excel example.  
   try {
