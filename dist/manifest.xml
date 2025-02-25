@@ -5,7 +5,7 @@
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="FormatPaiementFourListe"/>
-  <Description DefaultValue="A template to get started."/>
+  <Description DefaultValue="Outil de formatage de la liste des paiements fournisseur"/>
   <IconUrl DefaultValue="https://futech.fmcspro.ca/FormatPaiementFourListe/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://futech.fmcspro.ca/FormatPaiementFourListe/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
