@@ -2,15 +2,15 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>ba509913-43da-4464-bea1-3c4e20027d11</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="FormatPaiementFourListe"/>
+  <ProviderName>Futech</ProviderName>
+  <DefaultLocale>fr-CA</DefaultLocale>
+  <DisplayName DefaultValue="Format - liste des paiements fournisseur"/>
   <Description DefaultValue="Outil de formatage de la liste des paiements fournisseur"/>
   <IconUrl DefaultValue="https://futech.fmcspro.ca/FormatPaiementFourListe/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://futech.fmcspro.ca/FormatPaiementFourListe/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://www.futech.ca"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://www.futech.ca</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
@@ -30,32 +30,32 @@
           </GetStarted>
           <FunctionFile resid="Commands.Url"/>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
-            <OfficeTab id="TabHome">
-              <Group id="CommandsGroup">
+            <CustomTab id="Futech1">
+              <Group id="futAdminGroup">
                 <Label resid="CommandsGroup.Label"/>
                 <Icon>
                   <bt:Image size="16" resid="Icon.16x16"/>
                   <bt:Image size="32" resid="Icon.32x32"/>
                   <bt:Image size="80" resid="Icon.80x80"/>
                 </Icon>
-                <Control xsi:type="Button" id="TaskpaneButton">
-                  <Label resid="TaskpaneButton.Label"/>
+                <Control xsi:type="Button" id="futFormatPaiementFourListe">
+                  <Label resid="futFormat.Label"/>
                   <Supertip>
-                    <Title resid="TaskpaneButton.Label"/>
-                    <Description resid="TaskpaneButton.Tooltip"/>
+                    <Title resid="futFormat.Label"/>
+                    <Description resid="futFormat.Tooltip"/>
                   </Supertip>
                   <Icon>
                     <bt:Image size="16" resid="Icon.16x16"/>
                     <bt:Image size="32" resid="Icon.32x32"/>
                     <bt:Image size="80" resid="Icon.80x80"/>
                   </Icon>
-                  <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>ButtonId1</TaskpaneId>
-                    <SourceLocation resid="Taskpane.Url"/>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionId>futFormatPaFourListe</FunctionId>
                   </Action>
                 </Control>
               </Group>
-            </OfficeTab>
+              <Label resid="CustomTab.Label"/>
+            </CustomTab>
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
@@ -73,12 +73,13 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Task Pane"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Administration"/>
+        <bt:String id="futFormat.Label" DefaultValue="Liste Paiements"/>
+        <bt:String id="CustomTab.Label" DefaultValue="Futech"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded successfully. Go to the HOME tab and click the 'Show Task Pane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
+        <bt:String id="futFormat.Tooltip" DefaultValue="Formatter la liste de paiements fournisseur pour l'impression."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
