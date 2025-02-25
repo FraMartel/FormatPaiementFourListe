@@ -10,7 +10,6 @@ Office.onReady(() => {
 });
 
 async function futFormatPaFourListe(event) {
-
   // Implement your custom code here. The following code is a simple Excel example.  
   try {
     await Excel.run(async (context) => {
@@ -30,10 +29,10 @@ async function futFormatPaFourListe(event) {
 
     await context.sync();
     });
-    } catch (error) {
-        // Note: In a production add-in, notify the user through your add-in's UI.
-        console.error(error);
-    }
+  } catch (error) {
+      // Note: In a production add-in, notify the user through your add-in's UI.
+      console.error(error);
+  }
 
   // Calling event.completed is required. event.completed lets the platform know that processing has completed.
   event.completed();
